@@ -1,0 +1,57 @@
+plugins {
+    alias(libs.plugins.androidLibrary)
+    alias(libs.plugins.kotlin)
+}
+
+android {
+    namespace 'org.axelbrians.companionkit'
+    compileSdk libs.versions.sdk.compile.get().toInteger()
+
+    defaultConfig {
+        minSdk libs.versions.sdk.min.get().toInteger()
+        targetSdk libs.versions.sdk.target.get().toInteger()
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = libs.versions.jvm.get()
+    }
+    buildFeatures {
+        compose true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion libs.versions.compose.compiler.get()
+    }
+}
+
+dependencies {
+
+    implementation libs.androidx.core.ktx
+    implementation libs.androidx.appcompat
+
+    implementation(platform(libs.compose.bom))
+    implementation(libs.compose.activity)
+    implementation(libs.compose.ui)
+    implementation(libs.compose.graphics)
+    implementation(libs.compose.tooling.preview)
+    implementation(libs.compose.material3)
+
+    debugImplementation(libs.compose.tooling)
+    debugImplementation(libs.test.compose.manifest)
+
+    testImplementation libs.test.junit
+    androidTestImplementation libs.test.androidx.junit
+    androidTestImplementation libs.test.androidx.espresso.core
+}

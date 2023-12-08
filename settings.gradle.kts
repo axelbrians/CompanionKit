@@ -21,3 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "CompanionKit"
 include(":app")
+include(":companion-kit-core")

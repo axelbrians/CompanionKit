@@ -3,5 +3,6 @@
 plugins {
     alias(libs.plugins.agp) apply false
     alias(libs.plugins.kotlin) apply false
+    alias(libs.plugins.androidLibrary) apply false
 }
 true // Needed to make the Suppress annotation work for the plugins block
