@@ -1,4 +1,4 @@
-package org.axelbrians.companionkit
+package org.axelbrians.companionkit_core
 
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.Stable
@@ -17,9 +17,9 @@ import androidx.compose.ui.graphics.lerp
 import androidx.compose.ui.platform.debugInspectorInfo
 import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.delay
-import org.axelbrians.companionkit.RecomposeHighlighter.DrawTimeout
-import org.axelbrians.companionkit.RecomposeHighlighter.InterpolationDivisor
-import org.axelbrians.companionkit.RecomposeHighlighter.MinFraction
+import org.axelbrians.companionkit_core.RecomposeHighlighter.DrawTimeout
+import org.axelbrians.companionkit_core.RecomposeHighlighter.InterpolationDivisor
+import org.axelbrians.companionkit_core.RecomposeHighlighter.MinFraction
 import kotlin.math.min
 
 /**

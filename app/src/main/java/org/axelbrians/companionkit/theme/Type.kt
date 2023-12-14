@@ -1,4 +1,4 @@
-package org.axelbrians.companionkit.ui.theme
+package org.axelbrians.companionkit.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

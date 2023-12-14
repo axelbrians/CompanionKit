@@ -10,7 +10,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import org.axelbrians.companionkit.ui.theme.CompanionKitTheme
+import org.axelbrians.companionkit.theme.CompanionKitTheme
+import org.axelbrians.companionkit_core.recomposeHighlighter
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -1,4 +1,4 @@
-package org.axelbrians.companionkit
+package org.axelbrians.companionkit_core
 
 import org.junit.Test
 
