@@ -51,27 +51,26 @@ android {
 }
 
 dependencies {
-
-    implementation(project(":companion-kit-core"))
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
 
     implementation(platform(libs.compose.bom))
+    androidTestImplementation(platform(libs.compose.bom))
+
     implementation(libs.compose.activity)
     implementation(libs.compose.ui)
     implementation(libs.compose.graphics)
     implementation(libs.compose.tooling.preview)
     implementation(libs.compose.material3)
-
     debugImplementation(libs.compose.tooling)
     debugImplementation(libs.test.compose.manifest)
-
-    testImplementation(libs.test.junit)
-
+    androidTestImplementation(libs.test.compose.junit4)
     androidTestImplementation(libs.test.androidx.junit)
     androidTestImplementation(libs.test.androidx.espresso.core)
-    androidTestImplementation(platform(libs.compose.bom))
-    androidTestImplementation(libs.test.compose.junit4)
+
+    implementation(libs.axelbrians.companionkit)
+
+    testImplementation(libs.test.junit)
 }
 
 fun org.gradle.api.provider.Provider<String>.getAsInt(): Int {

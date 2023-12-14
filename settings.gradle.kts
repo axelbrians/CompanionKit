@@ -16,9 +16,9 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven { setUrl("https://jitpack.io") }
     }
 }
 
 rootProject.name = "CompanionKit"
 include(":app")
-include(":companion-kit-core")
