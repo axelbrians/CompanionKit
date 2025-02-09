@@ -68,7 +68,7 @@ dependencies {
     androidTestImplementation(libs.test.androidx.junit)
     androidTestImplementation(libs.test.androidx.espresso.core)
 
-    implementation(libs.axelbrians.companionkit)
+    implementation(project(":companion-kit-core"))
 
     testImplementation(libs.test.junit)
 }
