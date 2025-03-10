@@ -62,8 +62,10 @@ dependencies {
     implementation(libs.compose.graphics)
     implementation(libs.compose.tooling.preview)
     implementation(libs.compose.material3)
+
     debugImplementation(libs.compose.tooling)
     debugImplementation(libs.test.compose.manifest)
+
     androidTestImplementation(libs.test.compose.junit4)
     androidTestImplementation(libs.test.androidx.junit)
     androidTestImplementation(libs.test.androidx.espresso.core)

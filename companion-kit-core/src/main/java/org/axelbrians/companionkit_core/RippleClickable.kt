@@ -1,5 +1,6 @@
 package org.axelbrians.companionkit_core
 
+import androidx.compose.foundation.IndicationNodeFactory
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.material3.ripple
@@ -13,10 +14,10 @@ fun Modifier.rippleClickable(
     enabled: Boolean = true,
     onClickLabel: String? = null,
     role: Role? = null,
+    indication: IndicationNodeFactory = remember { ripple() },
     onClick: () -> Unit
 ): Modifier {
     val interaction = remember { MutableInteractionSource() }
-    val indication = remember { ripple(bounded = false) }
 
     return this then Modifier.clickable(
         interactionSource = interaction,
